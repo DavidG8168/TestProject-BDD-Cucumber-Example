@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Junit
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.7.1'
+    // Cucumber
+    implementation group: 'io.cucumber', name: 'cucumber-junit', version: '6.9.1'
+    compile group: 'io.cucumber', name: 'cucumber-java', version: '6.9.1'
+    // TP SDK.
+    implementation 'io.testproject:java-sdk:0.65.3-RELEASE'
+    // TP SDK Internal logging.
+    testCompile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.30'
+}
